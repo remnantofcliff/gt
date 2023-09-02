@@ -1,3 +1,6 @@
+#ifndef GET_TIME_H
+#define GET_TIME_H
+
 #ifdef __unix__
 #include <sys/time.h>
 #elifdef WIN32
@@ -20,3 +23,5 @@ static inline double gt_get_time() {
   return t.QuadPart / freq.QuadPart;
 #endif
 }
+
+#endif
